@@ -1,0 +1,95 @@
+body {
+    margin:0;
+    padding:0;
+    width:100%;
+}
+
+.MainPic {
+    background-color: aqua;
+    width: 100%;
+    height: 60ch;
+    float: left;
+    
+}
+
+.MPText {
+    width: 30%;
+    height: 45ch;
+    float: left;
+}
+
+.Leaf {
+    width: 70%;
+    height: fit-content;
+    float: right;
+}
+
+.OrderBlurb {
+    background-color: red;
+    width: 100%;
+    height: 8ch;
+    float: left;
+}
+
+.FeaturedItemsHome {
+    background-color: blueviolet;
+    width: 100%;
+    height: 65ch;
+    float: left
+}
+
+.FIHeader {
+    text-align: center;
+}
+
+.FeaturedBlock {
+    background-color: cornflowerblue;
+    width: 15%;
+    height: 70%;
+    float: left;
+    margin: auto;
+    padding: 3ch 5ch;
+    background-clip: content-box;
+}
+
+.Center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.FBlockImg {
+    width: 100%;
+    height: 28ch;
+    float: left;
+}
+
+.RegisterHome {
+    background-color: #FF8DA1;
+    width: 100%;
+    height: 60ch;
+    float: left;
+}
+
+.RegisterBox {
+    background-color: #8DFFEB;
+    width: 30ch;
+    height: 50ch;
+    /* padding-top: 15%; */
+    background-clip: content-box;
+}
+
+.WNewHome {
+    background-color: coral;
+    width: 100%;
+    height: 60ch;
+    float: left;
+}
+
+footer {
+    background-color: darkmagenta;
+    width: 100%;
+    height: 30ch;
+    float: left;
+}
