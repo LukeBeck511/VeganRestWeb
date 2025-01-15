@@ -1,95 +1,149 @@
 body {
-    margin:0;
-    padding:0;
-    width:100%;
+  margin:0;
+  padding:0;
+  width:100%;
 }
 
+/* keeping it in order, nav bar start */
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  animation: slideInFromTop 1s ease-in-out;
+}
+
+
+/* highlight on navbar*/
+.navbar .center-nav a {
+  color: black;
+  margin-left: 15px;
+  font-size:2rem;
+  transition: all 0.5s ease;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+
+.navbar .center-nav a:hover {
+  color: #98FF98;
+  text-shadow: 0px 0px 30px #98FF98;
+}
+
+
+/* underline on nav bar*/
+.navbar .center-nav a{
+  position: relative;
+  text-decoration:none;
+}
+
+
+.navbar .center-nav a::before{
+content: "";
+position: absolute;
+width: 100%;
+height: 2px;
+bottom: 0;
+left: 0;
+background-color: #98FF98;
+visibility: hidden;
+transform: scaleX(0);
+transition: all 0.3s ease-in-out;
+}
+
+
+.navbar .center-nav a:hover::before{
+  visibility: visible;
+  transform: scaleX(1)
+;}
+
 .MainPic {
-    background-color: aqua;
-    width: 100%;
-    height: 60ch;
-    float: left;
-    
+  background-color: aqua;
+  width: 100%;
+  height: 60ch;
+  float: left;
+  
 }
 
 .MPText {
-    width: 30%;
-    height: 45ch;
-    float: left;
+  width: 30%;
+  height: 45ch;
+  float: left;
 }
 
 .Leaf {
-    width: 70%;
-    height: fit-content;
-    float: right;
+  width: 70%;
+  height: fit-content;
+  float: right;
 }
 
+ 
 .OrderBlurb {
-    background-color: red;
-    width: 100%;
-    height: 8ch;
-    float: left;
+  background-color: red;
+  width: 100%;
+  height: 8ch;
+  float: left;
 }
 
 .FeaturedItemsHome {
-    background-color: blueviolet;
-    width: 100%;
-    height: 65ch;
-    float: left
+  background-color: blueviolet;
+  width: 100%;
+  height: 65ch;
+  float: left
 }
 
 .FIHeader {
-    text-align: center;
+  text-align: center;
 }
 
 .FeaturedBlock {
-    background-color: cornflowerblue;
-    width: 15%;
-    height: 70%;
-    float: left;
-    margin: auto;
-    padding: 3ch 5ch;
-    background-clip: content-box;
+  background-color: cornflowerblue;
+  width: 15%;
+  height: 70%;
+  float: left;
+  margin: auto;
+  padding: 3ch 5ch;
+  background-clip: content-box;
+  
 }
 
 .Center {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    /* align-items: center; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* align-items: center; */
 }
 
 .FBlockImg {
-    width: 100%;
-    height: 28ch;
-    float: left;
+  width: 100%;
+  height: 28ch;
+  float: left;
 }
 
 .RegisterHome {
-    background-color: #FF8DA1;
-    width: 100%;
-    height: 60ch;
-    float: left;
+  background-color: #FF8DA1;
+  width: 100%;
+  height: 60ch;
+  float: left;
 }
 
 .RegisterBox {
-    background-color: #8DFFEB;
-    width: 30ch;
-    height: 50ch;
-    /* padding-top: 15%; */
-    background-clip: content-box;
+  background-color: #8DFFEB;
+  width: 30ch;
+  height: 50ch;
+  /* padding-top: 15%; */
+  background-clip: content-box;
 }
 
 .WNewHome {
-    background-color: coral;
-    width: 100%;
-    height: 60ch;
-    float: left;
+  background-color: coral;
+  width: 100%;
+  height: 60ch;
+  float: left;
 }
 
 footer {
-    background-color: darkmagenta;
-    width: 100%;
-    height: 30ch;
-    float: left;
+  background-color: darkmagenta;
+  width: 100%;
+  height: 30ch;
+  float: left;
 }
