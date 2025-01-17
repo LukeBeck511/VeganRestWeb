@@ -1,149 +1,199 @@
 body {
-  margin:0;
-  padding:0;
-  width:100%;
+    margin:0;
+    padding:0;
+    width:100%;
 }
+
+button {
+    all: unset;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* These are css things i am going to call again and again */
+
+.Center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.TextCenter{
+    text-align: center;
+}
+
+/* This is the start of the CSS edits. It should align with how the home page is aligned, Different sections will be commented off for different pages (home page, menu etc...) */
+/* Home Page Start */
 
 /* keeping it in order, nav bar start */
 
 .navbar {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  animation: slideInFromTop 1s ease-in-out;
-}
-
-
-/* highlight on navbar*/
-.navbar .center-nav a {
-  color: black;
-  margin-left: 15px;
-  font-size:2rem;
-  transition: all 0.5s ease;
-  animation: fadeInUp 1s ease-in-out;
-}
-
-
-.navbar .center-nav a:hover {
-  color: #98FF98;
-  text-shadow: 0px 0px 30px #98FF98;
-}
-
-
-/* underline on nav bar*/
-.navbar .center-nav a{
-  position: relative;
-  text-decoration:none;
-}
-
-
-.navbar .center-nav a::before{
-content: "";
-position: absolute;
-width: 100%;
-height: 2px;
-bottom: 0;
-left: 0;
-background-color: #98FF98;
-visibility: hidden;
-transform: scaleX(0);
-transition: all 0.3s ease-in-out;
-}
-
-
-.navbar .center-nav a:hover::before{
-  visibility: visible;
-  transform: scaleX(1)
-;}
-
-.MainPic {
-  background-color: aqua;
-  width: 100%;
-  height: 60ch;
-  float: left;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    animation: slideInFromTop 1s ease-in-out;
+  }
   
+  
+  /* highlight on navbar*/
+  .navbar .center-nav a {
+    color: black;
+    margin-left: 15px;
+    font-size:2rem;
+    transition: all 0.5s ease;
+    animation: fadeInUp 1s ease-in-out;
+  }
+  
+  
+  .navbar .center-nav a:hover {
+    color: #98FF98;
+    text-shadow: 0px 0px 30px #98FF98;
+  }
+  
+  
+  /* underline on nav bar*/
+  .navbar .center-nav a{
+    position: relative;
+    text-decoration:none;
+  }
+  
+  
+  .navbar .center-nav a::before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #98FF98;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+  }
+  
+  
+  .navbar .center-nav a:hover::before{
+    visibility: visible;
+    transform: scaleX(1)
+  ;}
+
+/* This is the Main Picture of the website otherwise known as the "Call to Action" or the hook or even the attention grabber. Its supposed to suck you into the website. For this website it is just the main picture */
+
+
+
+.CallToAction {
+    background-color: aqua;
+    width: 100%;
+    height: 60ch;
+    float: left;
+    
 }
 
-.MPText {
-  width: 30%;
-  height: 45ch;
-  float: left;
+.CTAText {
+    width: 30%;
+    height: 45ch;
+    float: left;
 }
 
 .Leaf {
-  width: 70%;
-  height: fit-content;
-  float: right;
+    width: 70%;
+    height: fit-content;
+    float: right;
 }
 
- 
-.OrderBlurb {
-  background-color: red;
-  width: 100%;
-  height: 8ch;
-  float: left;
-}
+/* This is the "Order Now!" Section, It may be deleted later if its not used. */
+
+/* .OrderBlurb {
+    background-color: red;
+    width: 100%;
+    height: 8ch;
+    float: left;
+} */
+
+/* This is the start of the featured Items section, showcasing our 5 (# may change later) featured menu items */
 
 .FeaturedItemsHome {
-  background-color: blueviolet;
-  width: 100%;
-  height: 65ch;
-  float: left
+    background-color: blueviolet;
+    width: 100%;
+    height: 60vh;
+    float: left
 }
 
 .FIHeader {
-  text-align: center;
+    text-align: center;
 }
 
 .FeaturedBlock {
-  background-color: cornflowerblue;
-  width: 15%;
-  height: 70%;
-  float: left;
-  margin: auto;
-  padding: 3ch 5ch;
-  background-clip: content-box;
-  
-}
-
-.Center {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  /* align-items: center; */
+    background-color: cornflowerblue;
+    width: 15%;
+    height: 45vh;
+    float: left;
+    /* margin: auto; */
+    padding: 3vh 5vh;
+    background-clip: content-box;
+    /* overflow: hidden; */
 }
 
 .FBlockImg {
-  width: 100%;
-  height: 28ch;
-  float: left;
+    width: 100%;
+    height: 28vh;
+    float: left;
 }
 
+/* This is the start of our "Register Now" section */
+
 .RegisterHome {
-  background-color: #FF8DA1;
-  width: 100%;
-  height: 60ch;
-  float: left;
+    background-color: #FF8DA1;
+    width: 100%;
+    height: 70vh;
+    float: left;
 }
 
 .RegisterBox {
-  background-color: #8DFFEB;
-  width: 30ch;
-  height: 50ch;
-  /* padding-top: 15%; */
-  background-clip: content-box;
+    background-color: #8DFFEB;
+    width: 24%;
+    height: 50vh;
+    margin-top: 9.5vh;
+    background-clip: content-box;
+    border-radius: 25px;
 }
 
-.WNewHome {
-  background-color: coral;
-  width: 100%;
-  height: 60ch;
-  float: left;
+.RBoxH1 {
+    text-align: center;
 }
+
+.RNow {
+    width: 30%;
+    height: 13%;
+    border-radius: 70px;
+    background-color: chocolate;
+    margin: auto;
+    margin-top: 45%;
+}
+
+.RNowText {
+    text-align: center;
+    padding-top: 12.5%;
+}
+
+/* This is the start of the "Whats New" section */
+
+.WhatsNewHome {
+    background-color: coral;
+    width: 100%;
+    height: 60vh;
+    float: left;
+}
+
+/* This is of course the very last part of our website, although very important it is the footer. */
 
 footer {
-  background-color: darkmagenta;
-  width: 100%;
-  height: 30ch;
-  float: left;
+    background-color: darkmagenta;
+    width: 100%;
+    height: 30vh;
+    float: left;
 }
