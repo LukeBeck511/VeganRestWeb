@@ -410,7 +410,7 @@ border-bottom: 2px solid grey;
   background-color: white;
   width: 70%;
   height: 50vh;
-  margin-top:5vh;
+  margin-top:4vh;
   background-clip: content-box;
   border-radius: 25px;
   box-shadow: 0 0 15px black;
@@ -440,7 +440,7 @@ border-bottom: 2px solid grey;
   background-color: white;
   width: 99%;
   height: 55vh;
-  margin-top:5vh;
+  margin-top:4vh;
   margin-bottom:5vh;
   background-clip: content-box;
   border-radius: 25px;
@@ -485,7 +485,7 @@ border-bottom: 2px solid grey;
   background-color: white;
   width: 70%;
   height: 50vh;
-  margin-top:8vh;
+  margin-top:4vh;
   background-clip: content-box;
   border-radius: 25px;
   box-shadow: 0 0 15px black;
@@ -513,7 +513,7 @@ border-bottom: 2px solid grey;
   background-color: white;
   width: 99%;
   height: 55vh;
-  margin-top:5vh;
+  margin-top:4vh;
   margin-bottom: 5vh;
   background-clip: content-box;
   border-radius: 25px;
@@ -559,7 +559,7 @@ border-bottom: 2px solid grey;
   background-color: white;
   width: 70%;
   height: 50vh;
-  margin-top:8vh;
+  margin-top:4vh;
   background-clip: content-box;
   border-radius: 25px;
   box-shadow: 0 0 15px black;
@@ -572,6 +572,34 @@ border-bottom: 2px solid grey;
 
 .Abtinfosus p{
   text-align: center;
+  font-size: 18px;
+ 
+}
+
+.AbtFAQ{
+  background-color: #3E5641;
+  height: 60vh;
+  border-bottom: 2px solid grey;
+ }
+
+ .AbtinfoFAQ{
+  background-color: white;
+  width: 90%;
+  height: 50vh;
+  margin-top:4vh;
+  background-clip: content-box;
+  border-radius: 25px;
+  box-shadow: 0 0 15px black;
+}
+
+.AbtH6{
+  text-align: center;
+  
+}
+
+.AbtinfoFAQ p{
+  text-align: left;
+  padding-left: 20px;
   font-size: 18px;
  
 }
