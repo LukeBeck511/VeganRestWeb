@@ -1,32 +1,90 @@
+* {
+  margin: 0;
+}
+
 body {
   margin:0;
   padding:0;
   width:100%;
 }
 
+button {
+  all: unset;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* These are css things i am going to call again and again */
+
+.Center {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+.TextCenter{
+  text-align: center;
+}
+
+.links {
+  color: dodgerblue;
+}
+
+/* This is the start of the CSS edits. It should align with how the home page is aligned, Different sections will be commented off for different pages (home page, menu etc...) */
+/* Home Page Start */
+
 /* keeping it in order, nav bar start */
 
 .navbar {
   display: flex;
-  justify-content: space-around;
+  /* justify-content: space-around; */
   align-items: center;
   animation: slideInFromTop 1s ease-in-out;
+  background-color: #6A9F6A;
+  height: 105px;
+  float: left;
+  width: 100%;
+  /* border-bottom: 3px solid #212121; */
+  border-bottom: 2px solid rgba(33, 33, 33, 0.2);
 }
 
+.NavImg {
+  max-height: 50px;
+  float: right;
+  margin-left: 200px;
+  margin-right: 25px;
+}
+
+.center-nav{
+  max-width: 1200px;
+  position: relative;
+  text-align: center;
+  font-weight: 700;
+  vertical-align: auto;
+  /* height: 40px; */
+}
 
 /* highlight on navbar*/
 .navbar .center-nav a {
-  color: black;
-  margin-left: 15px;
-  font-size:2rem;
+  color: #D9C6A1;
+  /* margin-left: 25px; */
+  font-size: 1.5rem;
   transition: all 0.5s ease;
   animation: fadeInUp 1s ease-in-out;
 }
 
+.center-nav a {
+  /* padding-left: 25px; */
+  padding: 20px 25px;
+}
 
 .navbar .center-nav a:hover {
-  color: #98FF98;
-  text-shadow: 0px 0px 30px #98FF98;
+  color: #5D4E6D;
+  text-shadow: 0px 0px 30px #5D4E6D;
 }
 
 
@@ -34,6 +92,8 @@ body {
 .navbar .center-nav a{
   position: relative;
   text-decoration:none;
+  font-family: Arial, Helvetica, sans-serif;
+  display: inline;
 }
 
 
@@ -44,7 +104,7 @@ width: 100%;
 height: 2px;
 bottom: 0;
 left: 0;
-background-color: #98FF98;
+background-color: #5D4E6D;
 visibility: hidden;
 transform: scaleX(0);
 transition: all 0.3s ease-in-out;
@@ -56,94 +116,462 @@ transition: all 0.3s ease-in-out;
   transform: scaleX(1)
 ;}
 
-.MainPic {
-  background-color: aqua;
+
+/* This is the Main Picture of the website otherwise known as the "Call to Action" or the hook or even the attention grabber. Its supposed to suck you into the website. For this website it is just the main picture */
+
+
+
+.CallToAction {
+  background-color: #D29B6E;
   width: 100%;
   height: 60ch;
   float: left;
-  
+  overflow: hidden;
+  background: linear-gradient(to bottom, #6A9F6A, #F4E3C1);
 }
 
-.MPText {
+.CTAh1 h1{
+  font-weight: bold;
+  font-size: 4rem;
+  font-family: sans-serif;
+  margin-bottom: 0;
+  margin-top: 90px;
+  width: 50%;
+  height: 50%;
+  /* overflow: hidden; */
+  text-align: center;
+  color: #333333;
+}
+
+.CTAh1 p{
+  width:25%;
+  height: 25%;
+  padding-left: 2%;
+  overflow: hidden;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #333333;
+}
+
+.CTAh1 .btn {
+  color: black;
+  border: 2px solid;
+  position: sticky;
+  top: 3rem;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  border-radius: 6px;
+  transition: all 0.5s ease;
+  margin-left: 110px;
+  animation: fadeInUp 1s ease-in-out 0.5 backwards;
+  color: #FFFFFF;
+  border: 2px solid #B85042;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.CTAh1 .btn2 {
+  color: black;
+  border: 2px solid;
+  position: sticky;
+  top: 3rem;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  border-radius: 6px;
+  transition: all 0.5s ease;
+  margin-left: 110px;
+  animation: fadeInUp 1s ease-in-out 0.5 backwards;
+  color: #FFFFFF;
+  border: 2px solid #7A8450;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.CTAh1 .btn:hover, .btn2:hover {
+  background-color: #5D4E6D;
+  box-shadow: 0 0 10px #5D4E6D;
+}
+
+
+/* .CTAText {
+  padding-top: 25px;
   width: 30%;
   height: 45ch;
   float: left;
-}
+  align-items: center;
+} */
 
 .Leaf {
   width: 70%;
-  height: fit-content;
+  height: 65ch;
   float: right;
 }
 
- 
-.OrderBlurb {
+/* This is the "Order Now!" Section, It may be deleted later if its not used. */
+
+/* .OrderBlurb {
   background-color: red;
   width: 100%;
   height: 8ch;
   float: left;
-}
+} */
+
+/* This is the start of the featured Items section, showcasing our 5 (# may change later) featured menu items */
 
 .FeaturedItemsHome {
-  background-color: blueviolet;
+  background-color: #F4E3C1;
   width: 100%;
-  height: 65ch;
+  max-height: 540px;
   float: left
 }
 
 .FIHeader {
   text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  /* font-weight: 700; */
+  padding-top: 20px;
+  color: #5C4033;
 }
 
 .FeaturedBlock {
-  background-color: cornflowerblue;
+  background-color: #5A6E3D;
   width: 15%;
-  height: 70%;
+  max-height: 450px;
   float: left;
-  margin: auto;
-  padding: 3ch 5ch;
+  /* margin: auto; */
+  padding: 3vh 5vh;
   background-clip: content-box;
-  
-}
-
-.Center {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  /* align-items: center; */
+  /* overflow: hidden; */
+  /* border: 2px solid white; */
 }
 
 .FBlockImg {
   width: 100%;
-  height: 28ch;
+  max-height: 250px;
   float: left;
+  object-fit: cover;
+  /* border: 2px solid white; */
+  /* transition: transform 0.3s ease; */
 }
 
+/* .FeaturedBlock img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 50px #FFC4D1;
+} */
+
+.FBlockText { 
+  max-height: 187px;
+  padding-top: 50px;
+}
+
+.FeaturedBlock p {
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 10px;
+  color: #D4A373;
+  /* padding-top: 40px; */
+}
+
+/* This is the start of our "Register Now" section */
+
 .RegisterHome {
-  background-color: #FF8DA1;
+  background-color: #3D5A40;
+  /* background: linear-gradient(to bottom, #F4E3C1, 15% ,#3D5A40); */
   width: 100%;
-  height: 60ch;
+  min-height: 629px;
   float: left;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .RegisterBox {
-  background-color: #8DFFEB;
-  width: 30ch;
-  height: 50ch;
-  /* padding-top: 15%; */
+  background-color: #E4C1A2;
+  width: 460px;
+  min-height: 450px;
+  margin-top: 9.5vh;
   background-clip: content-box;
+  border-radius: 25px;
 }
 
-.WNewHome {
-  background-color: coral;
+.RBoxH1 {
+  text-align: center;
+}
+
+.RegisterBox p {
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 15px;
+}
+
+.RNow {
+  max-width: 138px;
+  min-width: 138px;
+  min-height: 59px;
+  max-height: 59px;
+  border-radius: 70px;
+  background-color: #C19A4C;
+  margin: auto;
+  margin-top: 45%;
+  transition: all 0.5s ease;
+  animation: fadeInUp 1s ease-in-out 0.5 backwards;
+  overflow: hidden;
+}
+
+.RegisterBox .RNow:hover {
+  background-color: #5D4E6D;
+  box-shadow: 0 0 10px #5D4E6D;
+}
+
+.RNowText{
+  text-align: center;
+  padding: 21px 20px 20px;
+  margin: 0;
+}
+
+.Rbtn {
+color: black;
+border: 2px solid;
+top: 3rem;
+padding: 14px 25px;
+border-radius: 6px;
+transition: all 0.5s ease;
+animation: fadeInUp 1s ease-in-out 0.5 backwards;
+color: #FFFFFF;
+border: 2px solid #B85042;
+font-family: Arial, Helvetica, sans-serif;
+margin-top: 60%;
+}
+
+/* This is the start of the "Whats New" section */
+
+.WhatsNewHome {
+  background-color: #004643;
   width: 100%;
-  height: 60ch;
-  float: left;
+  height: 60vh;
+  float: right;
+}
+
+
+.WhatsNewHome h1{
+text-align: center;
+color: white;
+font-weight: bold;
+font-size: 4rem;
+}
+
+.WhatsNewHome p{
+  text-align: center;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+/* This is of course the very last part of our website, although very important it is the footer. */
+
+.hours {
+  width: 100%;
+  background-color: blue;
+  overflow: hidden;
+  height: 140px;
+  display: flex;
+  justify-content: flex-start;
+  font-family: Arial, Helvetica, sans-serif;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+
+.headerhours {
+  margin: 10px 0;
+  
 }
 
 footer {
-  background-color: darkmagenta;
+  background-color: grey;
   width: 100%;
-  height: 30ch;
+  height: 225px;
   float: left;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  animation: slideInFromTop 1s ease-in-out;
+  color: #99C2A2;
+}
+
+.footerbar {
+  height: 105px;
+  max-width: 1200px;
+  position: relative;
+  text-align: center;
+  font-weight: 700;
+  vertical-align: auto;
+}
+
+.footerbar a{
+  padding: 25px 20px;
+}
+
+.footer .footerbar a {
+  color: black;
+  /* margin-left: 25px; */
+  font-size: 1.5rem;
+  transition: all 0.5s ease;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.footer .footerbar a:hover {
+  color: #5D4E6D;
+  text-shadow: 0px 0px 30px #5D4E6D;
+}
+
+
+/* underline on nav bar*/
+.footer .footerbar a{
+  position: relative;
+  text-decoration:none;
+  font-family: Arial, Helvetica, sans-serif;
+  display: inline;
+}
+
+
+.footer .footerbar a::before{
+content: "";
+position: absolute;
+width: 100%;
+height: 2px;
+bottom: 0;
+left: 0;
+background-color: #5D4E6D;
+visibility: hidden;
+transform: scaleX(0);
+transition: all 0.3s ease-in-out;
+}
+
+
+/* MENU SECTION */
+.menu {
+  align-items: center;
+  background-color: #004643;
+
+}
+
+.menu h1{
+  text-align: center;
+  font-weight: bold;
+  font-size: 4rem;
+}
+
+.breakfast{
+  background-color: #99C2A2;
+  font-weight: bold;
+  font-size: 4rem;
+}
+
+.breakfast h2{
+  text-align: center;
+  font-weight: bold;
+  font-size: 4rem;
+}
+
+.breakfast li{
+  text-align: center;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.lunch h3 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 4rem;
+}
+
+.lunch li{
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.drinks {
+  background-color: #99C2A2;
+}
+
+.drinks h4{
+  text-align: center;
+  font-weight: bold;
+  font-size: 4rem;
+}
+
+/* Register Section */
+
+.registerbody {
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  /* min-height: 700px; */
+  /* overflow: hidden; */
+}
+
+.registerform {
+  /* border-radius: 5px; */
+  background-color: #f2f2f2;
+  padding: 20px;
+  height: 100%;
+}
+
+input[type=text], input[type=password] {
+  width: 100%; 
+  padding: 12px; 
+  border: 1px solid #ccc; 
+  border-radius: 4px; 
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: none
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  /* background-color: lightsteelblue; */
+  outline: none;
+}
+
+.regishr {
+  border: 1px solid #f2f2f2;
+  margin-bottom: 25px;
+}
+
+.registerbutton {
+  width: 100%;
+  background-color: #5D4E6D;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  opacity: 0.9;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.registerbutton:hover {
+  opacity: 1;
+}
+
+.signin {
+  background-color: #f2f2f2;
+  text-align: center;
+  border: none;
+}
+
+hr {
+  margin-bottom: 0px;
+}
+
+.RegisOrderNow {
+  border-top: 3px solid black;  
+  border-bottom: 3px solid black;
+  text-align: center;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.RegisOrderNow p {
+  font-size: 20px;
 }
