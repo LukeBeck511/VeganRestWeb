@@ -2,7 +2,33 @@ body {
   margin:0;
   padding:0;
   width:100%;
+  font-family: 'Century Gothic', sans-serif;
 }
+
+button {
+  all: unset;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* These are css things i am going to call again and again */
+
+.Center {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+.TextCenter{
+  text-align: center;
+}
+
+/* This is the start of the CSS edits. It should align with how the home page is aligned, Different sections will be commented off for different pages (home page, menu etc...) */
+/* Home Page Start */
 
 /* keeping it in order, nav bar start */
 
@@ -11,6 +37,7 @@ body {
   justify-content: space-around;
   align-items: center;
   animation: slideInFromTop 1s ease-in-out;
+  color: #99C2A2
 }
 
 
@@ -25,8 +52,8 @@ body {
 
 
 .navbar .center-nav a:hover {
-  color: #98FF98;
-  text-shadow: 0px 0px 30px #98FF98;
+  color: #5D4E6D;
+  text-shadow: 0px 0px 30px #5D4E6D;
 }
 
 
@@ -44,7 +71,7 @@ width: 100%;
 height: 2px;
 bottom: 0;
 left: 0;
-background-color: #98FF98;
+background-color: #5D4E6D;
 visibility: hidden;
 transform: scaleX(0);
 transition: all 0.3s ease-in-out;
@@ -56,38 +83,94 @@ transition: all 0.3s ease-in-out;
   transform: scaleX(1)
 ;}
 
-.MainPic {
-  background-color: aqua;
+
+
+/* This is the Main Picture of the website otherwise known as the "Call to Action" or the hook or even the attention grabber. Its supposed to suck you into the website. For this website it is just the main picture */
+
+
+
+.CallToAction {
+  background-color: #3E5641;
   width: 100%;
   height: 60ch;
   float: left;
   
 }
 
-.MPText {
+.CTAh1 h1{
+  color:white;
+  font-weight: bold;
+  font-size: 4rem;
+  font-family: sans-serif;
+  margin-bottom: 0;
+  margin-top: 90px;
+  width: 50%;
+  height: 50%;
+  /* overflow: hidden; */
+  text-align: center;
+}
+
+.CTAh1 p{
+  width:25%;
+  height: 25%;
+  padding-left: 2%;
+  overflow: hidden;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.CTAh1 .btn {
+  color: white;
+  border: 2px solid;
+  position: sticky;
+  top: 3rem;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  border-radius: 6px;
+  transition: all 0.5s ease;
+  margin-left: 110px;
+  animation: fadeInUp 1s ease-in-out 0.5 backwards;
+
+}
+
+
+.CTAh1 .btn:hover {
+  background-color: #5D4E6D;
+  box-shadow: 0 0 10px #5D4E6D;
+}
+
+
+/* .CTAText {
+  padding-top: 25px;
   width: 30%;
   height: 45ch;
   float: left;
-}
+  align-items: center;
+} */
 
 .Leaf {
   width: 70%;
-  height: fit-content;
+  height: 60ch;
   float: right;
 }
 
- 
-.OrderBlurb {
+/* This is the "Order Now!" Section, It may be deleted later if its not used. */
+
+/* .OrderBlurb {
   background-color: red;
   width: 100%;
   height: 8ch;
   float: left;
-}
+} */
+
+/* This is the start of the featured Items section, showcasing our 5 (# may change later) featured menu items */
 
 .FeaturedItemsHome {
-  background-color: blueviolet;
+  background-color: #3E5641;
   width: 100%;
-  height: 65ch;
+  height: 60vh;
   float: left
 }
 
@@ -96,54 +179,427 @@ transition: all 0.3s ease-in-out;
 }
 
 .FeaturedBlock {
-  background-color: cornflowerblue;
+  background-color: #C9D5B5;
   width: 15%;
-  height: 70%;
+  height: 45vh;
   float: left;
-  margin: auto;
-  padding: 3ch 5ch;
+  /* margin: auto; */
+  padding: 3vh 5vh;
   background-clip: content-box;
-  
+  /* overflow: hidden; */
 }
 
-.Center {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  /* align-items: center; */
-}
 
 .FBlockImg {
-  width: 100%;
-  height: 28ch;
+  width: 99%;
+  height: 28vh;
   float: left;
+  object-fit: cover;
+  border: 2px solid white;
+  transition: transform 0.3s ease;
 }
 
+.FeaturedBlock img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 50px #FFC4D1;
+}
+
+
+/* This is the start of our "Register Now" section */
+
 .RegisterHome {
-  background-color: #FF8DA1;
+  background-color: #3E5641;
   width: 100%;
-  height: 60ch;
+  height: 70vh;
   float: left;
 }
 
 .RegisterBox {
-  background-color: #8DFFEB;
-  width: 30ch;
-  height: 50ch;
-  /* padding-top: 15%; */
+  background-color: #C9D5B5;
+  width: 24%;
+  height: 50vh;
+  margin-top: 9.5vh;
   background-clip: content-box;
+  border-radius: 25px;
 }
 
-.WNewHome {
-  background-color: coral;
-  width: 100%;
-  height: 60ch;
-  float: left;
+.RBoxH1 {
+  text-align: center;
 }
+
+.RegisterBox p {
+  text-align: center;
+}
+
+.RNow {
+  width: 30%;
+  height: 13%;
+  border-radius: 70px;
+  background-color: #99C2A2;
+  margin: auto;
+  margin-top: 45%;
+  transition: all 0.5s ease;
+  animation: fadeInUp 1s ease-in-out 0.5 backwards;
+}
+
+.RegisterBox .RNow:hover {
+  background-color: #5D4E6D;
+  box-shadow: 0 0 10px #5D4E6D;
+}
+
+.RNowText {
+  text-align: center;
+  padding-top: 15%;
+  
+}
+
+/* This is the start of the "Whats New" section */
+
+.WhatsNewHome {
+  background-color: #3E5641;
+  width: 100%;
+  height: 60vh;
+  float: right;
+}
+
+
+.WhatsNewHome h1{
+text-align: center;
+color: white;
+font-weight: bold;
+font-size: 4rem;
+}
+
+.WhatsNewHome p{
+  text-align: center;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+/* This is of course the very last part of our website, although very important it is the footer. */
 
 footer {
-  background-color: darkmagenta;
+  background-color: grey;
   width: 100%;
-  height: 30ch;
+  height: 30vh;
   float: left;
+}
+
+
+/* MENU SECTION */
+.menu {
+  font-size: 16px;
+  background-color: #3E5641;
+  padding-bottom: 50px;
+}
+
+/* headings */
+.menu h1{
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 5px;
+  font-size: 4rem;
+  margin-bottom: 20px;
+
+}
+
+.menu-group-heading{
+  margin: 0;
+  padding-bottom: 30px;
+  padding-top: 20px;
+  border-bottom: 2px solid grey;
+  padding-left: 20px;
+  font-size: 3rem;
+          
+}
+
+/* creating the flex boxes */
+.dishes1 {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.dishes2 {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.dishes3 {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+/* controls the box part */
+.dish{
+  margin-top: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px black;
+  transition: .3s ease-in-out;
+  width: 390px;
+  background: white;
+  padding-bottom: 25px;
+}
+
+/* text aligning for all the boxes */
+.dishes1 h2{
+  text-align: center;
+}
+.dishes1 p{
+  text-align: center;
+}
+.price{
+  text-align: center;
+}
+
+.dishes2 h2{
+  text-align: center;
+}
+.dishes2 p{
+  text-align: center;
+}
+
+.dishes3 h2{
+  text-align: center;
+}
+.dishes3 p{
+  text-align: center;
+}
+
+/* the images */
+.dishes1 img{
+  position: relative;
+  width: 390px;
+  height: 150px;
+  border-radius: 15px 15px 0 0;
+  align-items: center;
+  transition: .3s ease-in-out;
+}
+.dishes2 img{
+  position: relative;
+  width: 390px;
+  height: 150px;
+  border-radius: 15px 15px 0 0;
+  align-items: center;
+  transition: .3s ease-in-out;
+}
+
+.dishes3 img{
+  position: relative;
+  width: 390px;
+  height: 150px;
+  border-radius: 15px 15px 0 0;
+  align-items: center;
+  transition: .3s ease-in-out;
+}
+
+/* hover */
+.dish:hover{
+  transform: scale(1.1);
+  box-shadow: 0 0 50px #FFC4D1;
+}
+
+/* Start of about section */
+.AbtHome{
+background-color: #3E5641;
+height: 60vh;
+border-bottom: 2px solid grey;
+}
+
+.Abtinfo{
+  background-color: white;
+  width: 70%;
+  height: 50vh;
+  margin-top:4vh;
+  background-clip: content-box;
+  border-radius: 25px;
+  box-shadow: 0 0 15px black;
+  float:right;
+}
+
+.AbtH1{
+  text-align: center;
+  
+}
+
+.Abtinfo p{
+  text-align: center;
+  font-size: 18px;
+ 
+}
+
+
+
+.Abtftt{
+  background-color: #3E5641;
+  height: 63vh;
+  border-bottom: 2px solid grey;
+}
+
+.Abtinfoftt{
+  background-color: white;
+  width: 99%;
+  height: 55vh;
+  margin-top:4vh;
+  margin-bottom:5vh;
+  background-clip: content-box;
+  border-radius: 25px;
+  box-shadow: 0 0 15px black;
+  float:right;
+}
+
+.fttimg{
+  position: relative;
+  width: 49%;
+  height: 55vh;
+  border-radius: 15px 15px 15px 15px;
+  align-items: center;
+  transition: .3s ease-in-out;
+  float: left;
+}
+
+.Abtinfoftt p{
+  text-align: right;
+  font-size: 18px;
+  width: 45%;
+  float: right;
+  margin-right: 30px;
+ 
+}
+
+.AbtH2{
+  text-align: right;
+  margin-right: 60px;
+  width: 35%;
+  float:right;
+  
+}
+
+.Abtap{
+  background-color: #3E5641;
+  height: 60vh;
+  border-bottom: 2px solid grey;
+ }
+
+ .Abtinfoap{
+  background-color: white;
+  width: 70%;
+  height: 50vh;
+  margin-top:4vh;
+  background-clip: content-box;
+  border-radius: 25px;
+  box-shadow: 0 0 15px black;
+}
+
+.AbtH3{
+  text-align: center;
+  
+}
+
+.Abtinfoap p{
+  text-align: center;
+  font-size: 18px;
+ 
+}
+
+ .Abtprep{
+  background-color: #3E5641;
+  height: 63vh;
+  border-bottom: 2px solid grey;
+}
+ 
+ 
+.Abtinfoprep{
+  background-color: white;
+  width: 99%;
+  height: 55vh;
+  margin-top:4vh;
+  margin-bottom: 5vh;
+  background-clip: content-box;
+  border-radius: 25px;
+  box-shadow: 0 0 15px black;
+  float:left;
+  
+}
+ 
+ .prepimg{
+  position: relative;
+  width: 49%;
+  height: 55vh;
+  border-radius: 15px 15px 15px 15px;
+  align-items: center;
+  transition: .3s ease-in-out;
+  float: right;
+}
+
+.Abtinfoprep p{
+  text-align: left;
+  font-size: 18px;
+  width: 45%;
+  float: left;
+  margin-left: 30px;
+ 
+}
+
+.AbtH4{
+  text-align: left;
+  margin-left: 60px;
+  width: 35%;
+  float:left;
+  
+}
+
+ .AbtSus{
+  background-color: #3E5641;
+  height: 60vh;
+   border-bottom: 2px solid grey;
+ }
+
+ .Abtinfosus{
+  background-color: white;
+  width: 70%;
+  height: 50vh;
+  margin-top:4vh;
+  background-clip: content-box;
+  border-radius: 25px;
+  box-shadow: 0 0 15px black;
+}
+
+.AbtH5{
+  text-align: center;
+  
+}
+
+.Abtinfosus p{
+  text-align: center;
+  font-size: 18px;
+ 
+}
+
+.AbtFAQ{
+  background-color: #3E5641;
+  height: 60vh;
+  border-bottom: 2px solid grey;
+ }
+
+ .AbtinfoFAQ{
+  background-color: white;
+  width: 90%;
+  height: 50vh;
+  margin-top:4vh;
+  background-clip: content-box;
+  border-radius: 25px;
+  box-shadow: 0 0 15px black;
+}
+
+.AbtH6{
+  text-align: center;
+  
+}
+
+.AbtinfoFAQ p{
+  text-align: left;
+  padding-left: 20px;
+  font-size: 18px;
+ 
 }
