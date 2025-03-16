@@ -48,36 +48,14 @@ a {
   float: left;
   width: 100%;
   border-bottom: 2px solid rgba(33, 33, 33, 0.2);
+  font-weight: 600;
 }
 
 .NavImg {
-  max-height: 50px;
+  max-height: 80px;
   float: right;
   margin-left: 200px;
   margin-right: 25px;
-}
-
-.center-nav{
-  max-width: 1200px;
-  position: relative;
-  text-align: center;
-  font-weight: 700;
-  vertical-align: auto;
-  /* height: 40px; */
-}
-
-/* highlight on navbar*/
-.navbar .center-nav a {
-  color: #D9C6A1;
-  /* margin-left: 25px; */
-  font-size: 1.5rem;
-  transition: all 0.5s ease;
-  animation: fadeInUp 1s ease-in-out;
-}
-
-.center-nav a {
-  /* padding-left: 25px; */
-  padding: 20px 25px;
 }
 
 .navbar .center-nav a:hover {
@@ -86,7 +64,6 @@ a {
 }
 
 
-/* underline on nav bar*/
 .navbar .center-nav a{
   position: relative;
   text-decoration:none;
@@ -108,156 +85,271 @@ transform: scaleX(0);
 transition: all 0.3s ease-in-out;
 }
 
-
 .navbar .center-nav a:hover::before{
   visibility: visible;
-  transform: scaleX(1)
-;}
+  transform: scaleX(1);
+}
 
+.center-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.center-nav li {
+  display: inline-block;
+}
+
+.center-nav a {
+  text-decoration: none;
+  color: #D9C6A1;
+  font-size: 1.5rem;
+  padding: 20px 25px;
+  transition: all 0.5s ease;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.center-nav a:hover {
+  color: #5D4E6D;
+  text-shadow: 0px 0px 30px #5D4E6D;
+}
+
+.hamburger {
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  display: none;
+  margin-left: 90%;
+  float: left;
+  max-width: 100%;
+  position: absolute;
+}
+
+.navimgsscreen {
+  max-height: 80px;
+  display: none;
+  margin-left: 5px;
+}
+
+@media screen and (max-width: 900px) {
+  * {
+    margin: 0;
+  }
+
+  .center-nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 105px;
+    right: 20px;
+    background-color: #6A9F6A;
+    width: 200px;
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px;
+    z-index: 100;
+  }
+
+  .center-nav.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+    overflow: hidden;
+  }
+
+  .NavImg {
+    display: none;
+  }
+
+  .navimgsscreen {
+    display: inline;
+  }
+}
 
 /* This is the Main Picture of the website otherwise known as the "Call to Action" or the hook or even the attention grabber. Its supposed to suck you into the website. For this website it is just the main picture */
 
-
-
 .CallToAction {
-  background-color: #D29B6E;
-  width: 100%;
-  height: 60ch;
-  float: left;
-  overflow: hidden;
   background: linear-gradient(to bottom, #6A9F6A, #F4E3C1);
+  width: 100%;
+  min-height: 60ch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
+  flex-direction: row;
 }
 
-.CTAh1 h1{
+.CTAh1 {
+  flex: 1;
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.CTAh1 h1 {
   font-weight: bold;
-  font-size: 4rem;
+  font-size: 3rem;
   font-family: sans-serif;
-  margin-bottom: 0;
-  margin-top: 90px;
-  width: 50%;
-  height: 50%;
-  /* overflow: hidden; */
-  text-align: center;
+  margin: 10px 0;
   color: #333333;
 }
 
-.CTAh1 p{
-  width:25%;
-  height: 25%;
-  padding-left: 2%;
-  overflow: hidden;
-  text-align: center;
-  margin-bottom: 40px;
+.CTAh1 p {
+  margin: 10px 0;
   color: #333333;
+  font-size: 1.2rem;
+}
+
+.CTAh1 div {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.CTAh1 .btn, .CTAh1 .btn2 {
+  padding: 12px 22px;
+  border-radius: 6px;
+  transition: all 0.5s ease;
+  text-decoration: none;
+  display: inline-block;
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .CTAh1 .btn {
-  color: black;
-  border: 2px solid;
-  position: sticky;
-  top: 3rem;
-  padding-left: 25px;
-  padding-right: 25px;
-  padding-top: 14px;
-  padding-bottom: 14px;
-  border-radius: 6px;
-  transition: all 0.5s ease;
-  margin-left: 110px;
-  animation: fadeInUp 1s ease-in-out 0.5 backwards;
-  color: #FFFFFF;
   border: 2px solid #B85042;
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: transparent;
 }
 
 .CTAh1 .btn2 {
-  color: black;
-  border: 2px solid;
-  position: sticky;
-  top: 3rem;
-  padding-left: 25px;
-  padding-right: 25px;
-  padding-top: 14px;
-  padding-bottom: 14px;
-  border-radius: 6px;
-  transition: all 0.5s ease;
-  margin-left: 110px;
-  animation: fadeInUp 1s ease-in-out 0.5 backwards;
-  color: #FFFFFF;
   border: 2px solid #7A8450;
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: transparent;
 }
 
-.CTAh1 .btn:hover, .btn2:hover {
+.CTAh1 .btn:hover, .CTAh1 .btn2:hover {
   background-color: #5D4E6D;
   box-shadow: 0 0 10px #5D4E6D;
 }
 
-
-/* .CTAText {
-  padding-top: 25px;
-  width: 30%;
-  height: 45ch;
-  float: left;
-  align-items: center;
-} */
-
 .Leaf {
-  width: 70%;
-  height: 65ch;
-  float: right;
+  width: 50%;
+  height: 450px;
+  object-fit: cover;
+  order: 1;
 }
 
-/* This is the "Order Now!" Section, It may be deleted later if its not used. */
+@media (max-width: 768px) {
+  .CallToAction {
+    flex-direction: column;
+    align-items: center;
+  }
 
-/* .OrderBlurb {
-  background-color: red;
-  width: 100%;
-  height: 8ch;
-  float: left;
-} */
+  .Leaf {
+    order: -1;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
 
-/* This is the start of the featured Items section, showcasing our 5 (# may change later) featured menu items */
+  .CTAh1 {
+    max-width: 100%;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .CTAh1 .btn, .CTAh1 .btn2 {
+    width: 80%;
+    margin: 5px auto;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .CTAh1 h1 {
+    font-size: 2.5rem;
+  }
+
+  .CTAh1 p {
+    font-size: 1rem;
+  }
+}
 
 .FeaturedItemsHome {
   background-color: #F4E3C1;
   width: 100%;
   max-height: 540px;
-  float: left
+  float: left;
 }
 
 .FIHeader {
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
-  /* font-weight: 700; */
   padding-top: 20px;
   color: #5C4033;
 }
 
+.featuredresponsive {
+  display: flex;
+  overflow-x: auto;
+  flex-wrap: nowrap;
+  gap: 10px;
+  padding: 10px;
+  scroll-snap-type: x mandatory;
+  position: relative;
+  scrollbar-width: thin;
+  scrollbar-color: #5A6E3D #F4E3C1;
+  justify-content: center;
+}
+
+@media (max-width: 1706px) {
+  .featuredresponsive {
+    justify-content: unset;
+  }
+}
+
+.featuredresponsive::-webkit-scrollbar {
+  height: 8px;
+}
+
+.featuredresponsive::-webkit-scrollbar-thumb {
+  background-color: #5A6E3D;
+  border-radius: 10px;
+}
+
+.featuredresponsive::-webkit-scrollbar-track {
+  background: #F4E3C1;
+}
+
 .FeaturedBlock {
   background-color: #5A6E3D;
-  width: 15%;
+  flex: 0 0 250px;
   max-height: 450px;
-  float: left;
-  /* margin: auto; */
   padding: 3vh 5vh;
   background-clip: content-box;
-  /* overflow: hidden; */
-  /* border: 2px solid white; */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  scroll-snap-align: start;
+  min-width: 250px;
 }
 
 .FBlockImg {
   width: 100%;
   max-height: 250px;
-  float: left;
   object-fit: cover;
-  /* border: 2px solid white; */
-  /* transition: transform 0.3s ease; */
 }
-
-/* .FeaturedBlock img:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 50px #FFC4D1;
-} */
 
 .FBlockText { 
   max-height: 187px;
@@ -269,14 +361,13 @@ transition: all 0.3s ease-in-out;
   font-family: Arial, Helvetica, sans-serif;
   padding: 10px;
   color: #D4A373;
-  /* padding-top: 40px; */
 }
 
 /* This is the start of our "Register Now" section */
 
 .RegisterHome {
   background-color: #3D5A40;
-  /* background: linear-gradient(to bottom, #F4E3C1, 15% ,#3D5A40); */
+  background: linear-gradient(to bottom, #3D5A40 ,#6A8F6A);
   width: 100%;
   min-height: 629px;
   float: left;
@@ -346,7 +437,7 @@ margin-top: 60%;
 .WhatsNewHome {
   background-color: #004643;
   width: 100%;
-  height: 60vh;
+  height: 700px;
   float: right;
 }
 
@@ -364,11 +455,20 @@ font-size: 4rem;
   font-size: 2rem;
 }
 
+.WNBlock {
+  background-color: #5A6E3D;
+  width: 20%;
+  max-height: 450px;
+  float: left;
+  padding: 3vh 5vh;
+  background-clip: content-box;
+}
+
 /* This is of course the very last part of our website, although very important it is the footer. */
 
 .hours {
   width: 100%;
-  background-color: blue;
+  background-color: #6A8F6A;
   overflow: hidden;
   height: 140px;
   display: flex;
@@ -377,17 +477,31 @@ font-size: 4rem;
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
+  border-top: 2px solid rgba(33, 33, 33, 0.2);
 }
 
 .headerhours {
   margin: 10px 0;
-  
+}
+
+@media (max-width: 768px) {
+  .hours {
+    flex-direction: column;  /* Stack elements vertically on small screens */
+    height: auto;  /* Adjust height for stacked layout */
+    align-items: center;  /* Ensure the content stays centered vertically */
+  }
+
+  .headerhours {
+    margin: 10px 0;  /* Adjust margins for better spacing */
+    width: 100%;  /* Make sure each .headerhours div takes up full width */
+    text-align: center;  /* Keep text centered */
+  }
 }
 
 footer {
-  background-color: grey;
+  background-color: #263A28;
   width: 100%;
-  height: 225px;
+  height: 160px;
   float: left;
   justify-content: center;
   display: flex;
@@ -431,7 +545,6 @@ footer {
   display: inline;
 }
 
-
 .footer .footerbar a::before{
 content: "";
 position: absolute;
@@ -445,6 +558,17 @@ transform: scaleX(0);
 transition: all 0.3s ease-in-out;
 }
 
+.CRFoot {
+  width: 100%;
+  height: 50px;
+  background-color: #161A16;
+  color: #A3A38C;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;  /* Centers horizontally */
+  align-items: center;  /* Centers vertically */
+  font-family: Arial, Helvetica, sans-serif;
+}
 
 /* MENU SECTION */
 .menu {
