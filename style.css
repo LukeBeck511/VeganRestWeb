@@ -1,8 +1,11 @@
+* {
+  margin: 0;
+}
+
 body {
   margin:0;
   padding:0;
   width:100%;
-  font-family: 'Century Gothic', sans-serif;
 }
 
 button {
@@ -27,6 +30,10 @@ a {
   text-align: center;
 }
 
+.links {
+  color: dodgerblue;
+}
+
 /* This is the start of the CSS edits. It should align with how the home page is aligned, Different sections will be commented off for different pages (home page, menu etc...) */
 /* Home Page Start */
 
@@ -34,22 +41,44 @@ a {
 
 .navbar {
   display: flex;
-  justify-content: space-around;
   align-items: center;
   animation: slideInFromTop 1s ease-in-out;
-  color: #99C2A2
+  background-color: #6A9F6A;
+  height: 105px;
+  float: left;
+  width: 100%;
+  border-bottom: 2px solid rgba(33, 33, 33, 0.2);
 }
 
+.NavImg {
+  max-height: 50px;
+  float: right;
+  margin-left: 200px;
+  margin-right: 25px;
+}
+
+.center-nav{
+  max-width: 1200px;
+  position: relative;
+  text-align: center;
+  font-weight: 700;
+  vertical-align: auto;
+  /* height: 40px; */
+}
 
 /* highlight on navbar*/
 .navbar .center-nav a {
-  color: black;
-  margin-left: 15px;
-  font-size:2rem;
+  color: #D9C6A1;
+  /* margin-left: 25px; */
+  font-size: 1.5rem;
   transition: all 0.5s ease;
   animation: fadeInUp 1s ease-in-out;
 }
 
+.center-nav a {
+  /* padding-left: 25px; */
+  padding: 20px 25px;
+}
 
 .navbar .center-nav a:hover {
   color: #5D4E6D;
@@ -61,6 +90,8 @@ a {
 .navbar .center-nav a{
   position: relative;
   text-decoration:none;
+  font-family: Arial, Helvetica, sans-serif;
+  display: inline;
 }
 
 
@@ -84,21 +115,20 @@ transition: all 0.3s ease-in-out;
 ;}
 
 
-
 /* This is the Main Picture of the website otherwise known as the "Call to Action" or the hook or even the attention grabber. Its supposed to suck you into the website. For this website it is just the main picture */
 
 
 
 .CallToAction {
-  background-color: #3E5641;
+  background-color: #D29B6E;
   width: 100%;
   height: 60ch;
   float: left;
-  
+  overflow: hidden;
+  background: linear-gradient(to bottom, #6A9F6A, #F4E3C1);
 }
 
 .CTAh1 h1{
-  color:white;
   font-weight: bold;
   font-size: 4rem;
   font-family: sans-serif;
@@ -108,6 +138,7 @@ transition: all 0.3s ease-in-out;
   height: 50%;
   /* overflow: hidden; */
   text-align: center;
+  color: #333333;
 }
 
 .CTAh1 p{
@@ -117,10 +148,11 @@ transition: all 0.3s ease-in-out;
   overflow: hidden;
   text-align: center;
   margin-bottom: 40px;
+  color: #333333;
 }
 
 .CTAh1 .btn {
-  color: white;
+  color: black;
   border: 2px solid;
   position: sticky;
   top: 3rem;
@@ -132,11 +164,30 @@ transition: all 0.3s ease-in-out;
   transition: all 0.5s ease;
   margin-left: 110px;
   animation: fadeInUp 1s ease-in-out 0.5 backwards;
-
+  color: #FFFFFF;
+  border: 2px solid #B85042;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
+.CTAh1 .btn2 {
+  color: black;
+  border: 2px solid;
+  position: sticky;
+  top: 3rem;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  border-radius: 6px;
+  transition: all 0.5s ease;
+  margin-left: 110px;
+  animation: fadeInUp 1s ease-in-out 0.5 backwards;
+  color: #FFFFFF;
+  border: 2px solid #7A8450;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-.CTAh1 .btn:hover {
+.CTAh1 .btn:hover, .btn2:hover {
   background-color: #5D4E6D;
   box-shadow: 0 0 10px #5D4E6D;
 }
@@ -152,7 +203,7 @@ transition: all 0.3s ease-in-out;
 
 .Leaf {
   width: 70%;
-  height: 60ch;
+  height: 65ch;
   float: right;
 }
 
@@ -168,56 +219,74 @@ transition: all 0.3s ease-in-out;
 /* This is the start of the featured Items section, showcasing our 5 (# may change later) featured menu items */
 
 .FeaturedItemsHome {
-  background-color: #3E5641;
+  background-color: #F4E3C1;
   width: 100%;
-  height: 60vh;
+  max-height: 540px;
   float: left
 }
 
 .FIHeader {
   text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  /* font-weight: 700; */
+  padding-top: 20px;
+  color: #5C4033;
 }
 
 .FeaturedBlock {
-  background-color: #C9D5B5;
+  background-color: #5A6E3D;
   width: 15%;
-  height: 45vh;
+  max-height: 450px;
   float: left;
   /* margin: auto; */
   padding: 3vh 5vh;
   background-clip: content-box;
   /* overflow: hidden; */
+  /* border: 2px solid white; */
 }
-
 
 .FBlockImg {
-  width: 99%;
-  height: 28vh;
+  width: 100%;
+  max-height: 250px;
   float: left;
   object-fit: cover;
-  border: 2px solid white;
-  transition: transform 0.3s ease;
+  /* border: 2px solid white; */
+  /* transition: transform 0.3s ease; */
 }
 
-.FeaturedBlock img:hover {
+/* .FeaturedBlock img:hover {
   transform: scale(1.1);
   box-shadow: 0 0 50px #FFC4D1;
+} */
+
+.FBlockText { 
+  max-height: 187px;
+  padding-top: 50px;
 }
 
+.FeaturedBlock p {
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 10px;
+  color: #D4A373;
+  /* padding-top: 40px; */
+}
 
 /* This is the start of our "Register Now" section */
 
 .RegisterHome {
-  background-color: #3E5641;
+  background-color: #3D5A40;
+  /* background: linear-gradient(to bottom, #F4E3C1, 15% ,#3D5A40); */
   width: 100%;
-  height: 70vh;
+  min-height: 629px;
   float: left;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .RegisterBox {
-  background-color: #C9D5B5;
-  width: 24%;
-  height: 50vh;
+  background-color: #E4C1A2;
+  width: 460px;
+  min-height: 450px;
   margin-top: 9.5vh;
   background-clip: content-box;
   border-radius: 25px;
@@ -225,21 +294,28 @@ transition: all 0.3s ease-in-out;
 
 .RBoxH1 {
   text-align: center;
+  padding-top: 20px;
 }
 
 .RegisterBox p {
   text-align: center;
+  color: #FFFFFF;
+  font-size: 16px;
+  padding-top:30px;
 }
 
 .RNow {
-  width: 30%;
-  height: 13%;
+  max-width: 138px;
+  min-width: 138px;
+  min-height: 59px;
+  max-height: 59px;
   border-radius: 70px;
-  background-color: #99C2A2;
+  background-color: #C19A4C;
   margin: auto;
   margin-top: 45%;
   transition: all 0.5s ease;
   animation: fadeInUp 1s ease-in-out 0.5 backwards;
+  overflow: hidden;
 }
 
 .RegisterBox .RNow:hover {
@@ -247,16 +323,30 @@ transition: all 0.3s ease-in-out;
   box-shadow: 0 0 10px #5D4E6D;
 }
 
-.RNowText {
+.RNowText{
   text-align: center;
-  padding-top: 15%;
-  
+  padding: 21px 20px 20px;
+  margin: 0;
+}
+
+.Rbtn {
+color: black;
+border: 2px solid;
+top: 3rem;
+padding: 14px 25px;
+border-radius: 6px;
+transition: all 0.5s ease;
+animation: fadeInUp 1s ease-in-out 0.5 backwards;
+color: #FFFFFF;
+border: 2px solid #B85042;
+font-family: Arial, Helvetica, sans-serif;
+margin-top: 60%;
 }
 
 /* This is the start of the "Whats New" section */
 
 .WhatsNewHome {
-  background-color: #3E5641;
+  background-color: #004643;
   width: 100%;
   height: 60vh;
   float: right;
@@ -278,12 +368,392 @@ font-size: 4rem;
 
 /* This is of course the very last part of our website, although very important it is the footer. */
 
+.hours {
+  width: 100%;
+  background-color: blue;
+  overflow: hidden;
+  height: 140px;
+  display: flex;
+  justify-content: flex-start;
+  font-family: Arial, Helvetica, sans-serif;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+
+.headerhours {
+  margin: 10px 0;
+  
+}
+
 footer {
   background-color: grey;
   width: 100%;
-  height: 30vh;
+  height: 225px;
   float: left;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  animation: slideInFromTop 1s ease-in-out;
+  color: #99C2A2;
 }
+
+.footerbar {
+  height: 105px;
+  max-width: 1200px;
+  position: relative;
+  text-align: center;
+  font-weight: 700;
+  vertical-align: auto;
+}
+
+.footerbar a{
+  padding: 25px 20px;
+}
+
+.footer .footerbar a {
+  color: black;
+  /* margin-left: 25px; */
+  font-size: 1.5rem;
+  transition: all 0.5s ease;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.footer .footerbar a:hover {
+  color: #5D4E6D;
+  text-shadow: 0px 0px 30px #5D4E6D;
+}
+
+
+/* underline on nav bar*/
+.footer .footerbar a{
+  position: relative;
+  text-decoration:none;
+  font-family: Arial, Helvetica, sans-serif;
+  display: inline;
+}
+
+
+.footer .footerbar a::before{
+content: "";
+position: absolute;
+width: 100%;
+height: 2px;
+bottom: 0;
+left: 0;
+background-color: #5D4E6D;
+visibility: hidden;
+transform: scaleX(0);
+transition: all 0.3s ease-in-out;
+}
+
+
+/* Register Section */
+
+.registerbody {
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  /* min-height: 700px; */
+  /* overflow: hidden; */
+}
+
+.registerform {
+  /* border-radius: 5px; */
+  background-color: #f2f2f2;
+  padding: 20px;
+  height: 100%;
+}
+
+input[type=text], input[type=password] {
+  width: 100%; 
+  padding: 12px; 
+  border: 1px solid #ccc; 
+  border-radius: 4px; 
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: none
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  /* background-color: lightsteelblue; */
+  outline: none;
+}
+
+.regishr {
+  border: 1px solid #f2f2f2;
+  margin-bottom: 25px;
+}
+
+.registerbutton {
+  width: 100%;
+  background-color: #5D4E6D;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  opacity: 0.9;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.registerbutton:hover {
+  opacity: 1;
+}
+
+.signin {
+  background-color: #f2f2f2;
+  text-align: center;
+  border: none;
+}
+
+hr {
+  margin-bottom: 0px;
+}
+
+.RegisOrderNow {
+  border-top: 3px solid black;  
+  border-bottom: 3px solid black;
+  text-align: center;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.RegisOrderNow p {
+  font-size: 20px;
+}
+
+/* Start of about section */
+.AbtHome{
+  background-color: #3E5641;
+  height: 60vh;
+  width: 100%;
+  border-bottom: 2px solid grey;
+  overflow: hidden;
+ }
+
+  .Abtinfo{
+  background-color: white;
+  width: 70%;
+  height: 50vh;
+  margin-top:4vh;
+  /* background-clip: content-box; */
+  border-radius: 25px;
+  box-shadow: 0 0 15px black;
+}
+
+.AbtH1{
+  text-align: center;
+  padding-top: 20px;
+  font-size: 5vh;
+}
+
+.Abtinfo p{
+  text-align: center;
+  font-size: 3vh;;
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+  
+  
+  
+  .Abtftt{
+    background-color: #3E5641;
+    height: 63vh;
+    border-bottom: 2px solid grey;
+  }
+  
+  .Abtinfoftt{
+    background-color: white;
+    width: 99%;
+    height: 55vh;
+    margin-top:4vh;
+    margin-bottom:5vh;
+    background-clip: content-box;
+    border-radius: 25px;
+    box-shadow: 0 0 15px black;
+    float:right;
+  }
+  
+  .fttimg{
+    position: relative;
+    width: 49%;
+    height: 55vh;
+    border-radius: 15px 15px 15px 15px;
+    align-items: center;
+    transition: .3s ease-in-out;
+    float: left;
+  }
+  
+  .Abtinfoftt p{
+    text-align: right;
+    font-size: 18px;
+    width: 45%;
+    float: right;
+    margin-right: 30px;
+    padding-top: 30px;
+    font-size: 2.3vh;
+   
+  }
+  
+  .AbtH2{
+    text-align: right;
+    margin-right: 60px;
+    width: 20%;
+    float:right;
+    padding-top: 20px;
+    padding-right: 15%;
+    font-size: 5vh;
+    
+  }
+  
+  /* .Abtap{
+    background-color: #3E5641;
+    height: 60vh;
+    border-bottom: 2px solid grey;
+   }
+  
+   .Abtinfoap{
+    background-color: white;
+    width: 70%;
+    height: 50vh;
+    margin-top:4vh;
+    background-clip: content-box;
+    border-radius: 25px;
+    box-shadow: 0 0 15px black;
+  }
+  
+  .AbtH3{
+    text-align: center;
+    padding-top: 20px;
+  }
+  
+  .Abtinfoap p{
+    text-align: center;
+    font-size: 18px;
+   padding-top: 30px;
+  } */
+  
+   .Abtprep{
+    background-color: #3E5641;
+    height: 63vh;
+    border-bottom: 2px solid grey;
+  }
+   
+   
+  .Abtinfoprep{
+    background-color: white;
+    width: 99%;
+    height: 55vh;
+    margin-top:4vh;
+    margin-bottom: 5vh;
+    background-clip: content-box;
+    border-radius: 25px;
+    box-shadow: 0 0 15px black;
+    float:left;
+    
+  }
+   
+   .prepimg{
+    position: relative;
+    width: 49%;
+    height: 55vh;
+    border-radius: 15px 15px 15px 15px;
+    align-items: center;
+    transition: .3s ease-in-out;
+    float: right;
+  }
+  
+  .Abtinfoprep p{
+    text-align: left;
+    font-size: 18px;
+    width: 45%;
+    float: left;
+    margin-left: 30px;
+    padding-top: 40px;
+    font-size: 3vh;
+   
+  }
+  
+  .AbtH4{
+    text-align: left;
+    margin-left: 30px;
+    width: 35%;
+    float:left;
+    padding-top: 20px;
+    font-size: 5vh;
+    
+  }
+  
+   .AbtSus{
+    background-color: #3E5641;
+    height: 60vh;
+     border-bottom: 2px solid grey;
+   }
+  
+   .Abtinfosus{
+    background-color: white;
+    width: 70%;
+    height: 50vh;
+    margin-top:4vh;
+    background-clip: content-box;
+    border-radius: 25px;
+    box-shadow: 0 0 15px black;
+  }
+  
+  .AbtH5{
+    text-align: center;
+    padding-top: 20px;
+    font-size: 5vh;
+  }
+  
+  .Abtinfosus p{
+    text-align: center;
+   padding-top: 30px;
+   font-size: 30px;
+  }
+  
+  .AbtFAQ{
+    background-color: #3E5641;
+    height: 60vh;
+    border-bottom: 2px solid grey;
+   }
+  
+   .AbtinfoFAQ{
+    background-color: white;
+    width: 90%;
+    height: 67vh;
+    margin-top:4vh;
+    background-clip: content-box;
+    border-radius: 25px;
+    box-shadow: 0 0 15px black;
+    
+  }
+  
+  .AbtH6{
+    text-align: center;
+    padding-top: 20px;
+  }
+  
+  .AbtinfoFAQ p{
+    text-align: left;
+    padding-left: 20px;
+    font-size: 18px;
+   padding-top: 30px;
+   font-size: 4vh;
+  }
+
+  .AbtinfoFAQ h2{
+    text-align: left;
+    padding-left: 20px;
+    font-size: 18px;
+   padding-top: 10px;
+   font-size: 3vh;
+   font-weight: normal;
+
+  }
 
 
 /* MENU SECTION */
@@ -298,9 +768,19 @@ footer {
   text-align: center;
   font-weight: bold;
   letter-spacing: 5px;
-  font-size: 4rem;
-  margin-bottom: 20px;
+  font-size: 5rem;
+  margin-top: 0;
+  padding-top: 50px;
+  /* margin-bottom: 20px; */
 
+}
+.menu h3{
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 5px;
+  font-size: 2rem;
+  margin-top: 0;
+  padding-top: 50px;
 }
 
 .menu-group-heading{
@@ -329,6 +809,11 @@ footer {
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
+.dishes4 {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
 
 /* controls the box part */
 .dish{
@@ -337,6 +822,29 @@ footer {
   box-shadow: 0 0 15px black;
   transition: .3s ease-in-out;
   width: 390px;
+  height: 360px;
+  background: white;
+  padding-bottom: 25px;
+}
+
+.dish2{
+  margin-top: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px black;
+  transition: .3s ease-in-out;
+  width: 390px;
+  height: 370px;
+  background: white;
+  padding-bottom: 25px;
+}
+
+.dish3{
+  margin-top: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px black;
+  transition: .3s ease-in-out;
+  width: 390px;
+  height: 410px;
   background: white;
   padding-bottom: 25px;
 }
@@ -347,6 +855,7 @@ footer {
 }
 .dishes1 p{
   text-align: center;
+  padding-top: 2.5%;
 }
 .price{
   text-align: center;
@@ -357,6 +866,7 @@ footer {
 }
 .dishes2 p{
   text-align: center;
+  padding-top: 2.5%;
 }
 
 .dishes3 h2{
@@ -364,13 +874,25 @@ footer {
 }
 .dishes3 p{
   text-align: center;
+  padding-top: 2%;
+}
+
+.dishes4 h2{
+  text-align: center;
+  /* font-weight: 1000; */
+  /* font-size: xx-large; */
+}
+.dishes4 p{
+  text-align: center;
+  padding-top: 2.5%;
+  /* font-size: x-large; */
 }
 
 /* the images */
 .dishes1 img{
   position: relative;
   width: 390px;
-  height: 150px;
+  height: 180px;
   border-radius: 15px 15px 0 0;
   align-items: center;
   transition: .3s ease-in-out;
@@ -378,7 +900,7 @@ footer {
 .dishes2 img{
   position: relative;
   width: 390px;
-  height: 150px;
+  height: 180px;
   border-radius: 15px 15px 0 0;
   align-items: center;
   transition: .3s ease-in-out;
@@ -387,7 +909,16 @@ footer {
 .dishes3 img{
   position: relative;
   width: 390px;
-  height: 150px;
+  height: 180px;
+  border-radius: 15px 15px 0 0;
+  align-items: center;
+  transition: .3s ease-in-out;
+}
+
+.dishes4 img{
+  position: relative;
+  width: 390px;
+  height: 180px;
   border-radius: 15px 15px 0 0;
   align-items: center;
   transition: .3s ease-in-out;
@@ -397,209 +928,4 @@ footer {
 .dish:hover{
   transform: scale(1.1);
   box-shadow: 0 0 50px #FFC4D1;
-}
-
-/* Start of about section */
-.AbtHome{
-background-color: #3E5641;
-height: 60vh;
-border-bottom: 2px solid grey;
-}
-
-.Abtinfo{
-  background-color: white;
-  width: 70%;
-  height: 50vh;
-  margin-top:4vh;
-  background-clip: content-box;
-  border-radius: 25px;
-  box-shadow: 0 0 15px black;
-  float:right;
-}
-
-.AbtH1{
-  text-align: center;
-  
-}
-
-.Abtinfo p{
-  text-align: center;
-  font-size: 18px;
- 
-}
-
-
-
-.Abtftt{
-  background-color: #3E5641;
-  height: 63vh;
-  border-bottom: 2px solid grey;
-}
-
-.Abtinfoftt{
-  background-color: white;
-  width: 99%;
-  height: 55vh;
-  margin-top:4vh;
-  margin-bottom:5vh;
-  background-clip: content-box;
-  border-radius: 25px;
-  box-shadow: 0 0 15px black;
-  float:right;
-}
-
-.fttimg{
-  position: relative;
-  width: 49%;
-  height: 55vh;
-  border-radius: 15px 15px 15px 15px;
-  align-items: center;
-  transition: .3s ease-in-out;
-  float: left;
-}
-
-.Abtinfoftt p{
-  text-align: right;
-  font-size: 18px;
-  width: 45%;
-  float: right;
-  margin-right: 30px;
- 
-}
-
-.AbtH2{
-  text-align: right;
-  margin-right: 60px;
-  width: 35%;
-  float:right;
-  
-}
-
-.Abtap{
-  background-color: #3E5641;
-  height: 60vh;
-  border-bottom: 2px solid grey;
- }
-
- .Abtinfoap{
-  background-color: white;
-  width: 70%;
-  height: 50vh;
-  margin-top:4vh;
-  background-clip: content-box;
-  border-radius: 25px;
-  box-shadow: 0 0 15px black;
-}
-
-.AbtH3{
-  text-align: center;
-  
-}
-
-.Abtinfoap p{
-  text-align: center;
-  font-size: 18px;
- 
-}
-
- .Abtprep{
-  background-color: #3E5641;
-  height: 63vh;
-  border-bottom: 2px solid grey;
-}
- 
- 
-.Abtinfoprep{
-  background-color: white;
-  width: 99%;
-  height: 55vh;
-  margin-top:4vh;
-  margin-bottom: 5vh;
-  background-clip: content-box;
-  border-radius: 25px;
-  box-shadow: 0 0 15px black;
-  float:left;
-  
-}
- 
- .prepimg{
-  position: relative;
-  width: 49%;
-  height: 55vh;
-  border-radius: 15px 15px 15px 15px;
-  align-items: center;
-  transition: .3s ease-in-out;
-  float: right;
-}
-
-.Abtinfoprep p{
-  text-align: left;
-  font-size: 18px;
-  width: 45%;
-  float: left;
-  margin-left: 30px;
- 
-}
-
-.AbtH4{
-  text-align: left;
-  margin-left: 60px;
-  width: 35%;
-  float:left;
-  
-}
-
- .AbtSus{
-  background-color: #3E5641;
-  height: 60vh;
-   border-bottom: 2px solid grey;
- }
-
- .Abtinfosus{
-  background-color: white;
-  width: 70%;
-  height: 50vh;
-  margin-top:4vh;
-  background-clip: content-box;
-  border-radius: 25px;
-  box-shadow: 0 0 15px black;
-}
-
-.AbtH5{
-  text-align: center;
-  
-}
-
-.Abtinfosus p{
-  text-align: center;
-  font-size: 18px;
- 
-}
-
-.AbtFAQ{
-  background-color: #3E5641;
-  height: 60vh;
-  border-bottom: 2px solid grey;
- }
-
- .AbtinfoFAQ{
-  background-color: white;
-  width: 90%;
-  height: 50vh;
-  margin-top:4vh;
-  background-clip: content-box;
-  border-radius: 25px;
-  box-shadow: 0 0 15px black;
-}
-
-.AbtH6{
-  text-align: center;
-  
-}
-
-.AbtinfoFAQ p{
-  text-align: left;
-  padding-left: 20px;
-  font-size: 18px;
- 
 }
