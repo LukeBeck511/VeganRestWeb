@@ -10,18 +10,24 @@
 <header>
     <div class="navbar">
         <div>
-        <a href="home.html"><img class="NavImg" src="simple Tree house-1 (1).png"></a>
+            <a href="home.html">
+                <img class="NavImg" src="simple Tree house-1 (1).png">
+                <img class="navimgsscreen" src="simple Tree house-1 (1).png">
+            </a>
         </div>
-        <div class="center-nav">
-          <a href="#">Home</a>
-          <a href="menu.html">Menu</a>
-          <a href="#">About</a>
-          <a href="#">Order</a>
-          
-            <div class ="icons-nav">
-                <box-icon name='search'></box-icon>
-            </div>
-        </div>
+
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+
+        <ul class="center-nav">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Order</a></li>
+
+          <li class="icons-nav">
+              <box-icon name='search'></box-icon>
+          </li>
+        </ul>
     </div>
 </header>
 <body>
@@ -46,32 +52,32 @@
     <div class="FeaturedItemsHome">
         <h1 class="FIHeader">Tree House Signatures </h1>
         <div class="Center">
-            <div class="FeaturedBlock">
-                <img class="FBlockImg" src="chipsses.jpg">
-                <p>This is a description of what Featured Item 1 is!</p>
-                <p>This is going to be an order now or add to thing!</p>
-            </div>
-            <div class="FeaturedBlock">
-                <img class="FBlockImg" src="gyro.jpg">
-                <div class="FBlockText">
-                    <p class="FBlockText">This is a description of what Featured Item 1 is!</p>
-                    <p class="FBlockText">This is going to be an order now or add to order thing!</p>
+            <div class="featuredresponsive">
+                <div class="FeaturedBlock">
+                    <img class="FBlockImg" src="chipsses.jpg">
+                    <p>This is a description of what Featured Item 1 is!</p>
+                    <p>This is going to be an order now or add to thing!</p>
                 </div>
-            </div>
-            <div class="FeaturedBlock">
-                <img class="FBlockImg" src="scottlandpizza.jpg">
-                <p>This is a description of what Featured Item 1 is!</p>
-                <p>This is going to be an order now or add to order thing!</p>
-            </div>
-            <div class="FeaturedBlock">
-                <img class="FBlockImg" src="wineoasis.jpg">
-                <p>This is a description of what Featured Item 1 is!</p>
-                <p>This is going to be an order now or add to order thing!</p>
-            </div>
-            <div class="FeaturedBlock">
-                <img class="FBlockImg" src="leaf.jpg">
-                <p>This is a description of what Featured Item 1 is!</p>
-                <p>This is going to be an order now or add to order thing!</p>
+                <div class="FeaturedBlock">
+                    <img class="FBlockImg" src="gyro.jpg">
+                        <p>This is a description of what Featured Item 1 is!</p>
+                        <p>This is going to be an order now or add to order thing!</p>
+                </div>
+                <div class="FeaturedBlock">
+                    <img class="FBlockImg" src="scottlandpizza.jpg">
+                    <p>This is a description of what Featured Item 1 is!</p>
+                    <p>This is going to be an order now or add to order thing!</p>
+                </div>
+                <div class="FeaturedBlock">
+                    <img class="FBlockImg" src="wineoasis.jpg">
+                    <p>This is a description of what Featured Item 1 is!</p>
+                    <p>This is going to be an order now or add to order thing!</p>
+                </div>
+                <div class="FeaturedBlock">
+                    <img class="FBlockImg" src="gyro.jpg">
+                    <p>This is a description of what Featured Item 1 is!</p>
+                    <p>This is going to be an order now or add to order thing!</p>
+                </div>
             </div>
         </div>
     </div>
@@ -91,11 +97,20 @@
         </div>
     </div>
 
-    <div class="WhatsNewHome">
+    <!-- <div class="WhatsNewHome">
         <h1>Whats New</h1>
-        <p> We have seasonal deals! check them out! <br> and probably other things here
-        </p>
-    </div>
+        <div class="WNBlock">
+            <img class="FBlockImg" src="wineoasis.jpg">
+            <p>This is a description of what Featured Item 1 is!</p>
+            <p>This is going to be an order now or add to order thing!</p>
+        </div>
+        <div>
+
+        </div>
+        <div>
+
+        </div>
+    </div> -->
     <div class="hours">
         <div class="headerhours">
             <h1>Kitchen Hours:</h1>
@@ -123,5 +138,9 @@
             </div>
         </div>
     </footer>
+    <div class="CRFoot">
+        <p>Copyright ©2025</p>
+    </div>
+    <script src="responsive.js"></script>
 </body>
 </html>
